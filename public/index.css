@@ -1,0 +1,31 @@
+/* === Banner === */
+
+.banner {
+  background-color: var(--color-pink);
+  border-radius: 30px;
+  display: flex;
+}
+
+.banner__information {
+  width: 316px;
+  position: relative;
+  top: 117px;
+  left: 60px;
+}
+
+.banner__information h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.banner__information p {
+  font-size: 18px;
+  opacity: 70%;
+  line-height: 28px;
+}
+
+.banner__image-container img {
+  margin-left: 150%;
+  margin-top: 66px;
+}
+
