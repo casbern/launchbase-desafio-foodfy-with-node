@@ -16,7 +16,11 @@ server.get('/', function(req, res) {
 })
 
 server.get('/about', function(req, res) {
-  return res.render("index")
+  return res.render("about")
+})
+
+server.get('/recipes', function(req, res) {
+  return res.render("recipes")
 })
 
 
