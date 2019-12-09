@@ -9,22 +9,22 @@
 </head>
 
 <body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="Logo Foodfy"></a>
+      </div>
 
-  <header>
-    <div class="logo">
-      <a href="index.html"><img src="assets/logo.png" alt="Logo Foodfy"></a>
-    </div>
+      <div class="links">
+        <a id="about" href="/">Sobre</a>
+        <a id="recipes" href="/">Receitas</a>
+      </div>
 
-    <div class="links">
-      <a id="about" href="/">Sobre</a>
-      <a id="recipes" href="/">Receitas</a>
-    </div>
+    </header>
 
-  </header>
+    {% block content %}{% endblock %}
 
-
-  {% block content %}{% endblock %}
-
+  </div>
 </body>
 
 </html>
