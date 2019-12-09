@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
   <title>Foodfy</title>
   <link rel="stylesheet" href="/common.css">
   <link rel="stylesheet" href="/index.css">
@@ -10,25 +9,21 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <div class="logo">
-        <a href="index.html"><img src="assets/logo.png" alt="Logo Foodfy"></a>
-      </div>
 
-      <div class="links">
-        <a id="about" href="/">Sobre</a>
-        <a id="recipes" href="/">Receitas</a>
-      </div>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="assets/logo.png" alt="Logo Foodfy"></a>
+    </div>
 
-    </header>
+    <div class="links">
+      <a id="about" href="/">Sobre</a>
+      <a id="recipes" href="/">Receitas</a>
+    </div>
 
-  </div>
-  <footer>
-    <p>Todos direitos reservados, receitas Foodfy.</p>
-  </footer>
+  </header>
 
-  <script src="/scripts.js"></script>
+
+  {% block content %}{% endblock %}
 
 </body>
 
