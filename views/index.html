@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
 
-{% block css %}
+{% block head %}
+<title>Home - Foodfy</title>
 
-  <link rel="stylesheet" href="/index.css">
-  <link rel="stylesheet" href="/recipes.css">
+<link rel="stylesheet" href="/index.css">
+<link rel="stylesheet" href="/recipes.css">
 
 {% endblock %}
 
@@ -93,7 +94,9 @@
   </div>
 </section>
 
+{% endblock %}
 
+{% block modal %}
 
 <div class="modal-overlay">
   <div class="modal">

@@ -2,9 +2,12 @@
 <html>
 
 <head>
-  <title>Foodfy</title>
+    {% block head %}
+  
+      <title>Foodfy</title>
+  
+    {% endblock %}
   <link rel="stylesheet" href="/common.css">
-  {% block css %}{% endblock %}
 </head>
 
 <body>
@@ -25,10 +28,12 @@
 
   </div> <!-- end of the wrapper div -->
 
-  
   <footer>
     <p>Todos direitos reservados, receitas Foodfy.</p>
   </footer>
 
+  {% block modal %}{% endblock %}
+
 </body>
+
 </html>
