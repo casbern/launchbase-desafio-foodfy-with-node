@@ -1,9 +1,8 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
 <title>Recipes - Foodfy</title> 
 
-<link rel="stylesheet" href="/common.css">
 <link rel="stylesheet" href="/recipes.css">
 
 {% endblock %}
@@ -12,138 +11,23 @@
 
 <section class="cards">
 
-  <div class="card" id="burguer">
+{% for item in items %}
+
+  <div class="card" id="{{item.title}}">
     <div class="card__image-container">
-      <img src="assets/burger.png" alt="Burger">
+      <img src="{{item.image}}" alt="{{item.title}}">
     </div>
 
     <div class="card__recipe">
-      <p class="card__recipe-name">Triplo Bacon Burger</p>
-      <p class="card__author">por Jorge Relato</p>
+      <p class="card__recipe-name">{{item.title}}</p>
+      <p class="card__author">{{item.author}}</p>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/pizza.png" alt="Pizza">
-    </div>
+  {% endfor %}
 
-    <div class="card__recipe">
-      <p class="card__recipe-name">Pizza 4 estacoes</p>
-      <p class="card__author">por Fabiana Melo</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/espaguete.png" alt="Espaguete">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Espaguete ao alho</p>
-      <p class="card__author">por Julia Kinoto</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/lasanha.png" alt="Lasanha mac n'cheese">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Lasanha mac n'cheese</p>
-      <p class="card__author">por Juliano Vieira</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/doce.png" alt="Docinhos pao-do-ceu">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Docinhos pao-do-ceu</p>
-      <p class="card__author">por Ricardo Golvea</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/asinhas.png" alt="Asinhas de frango ao barbecue">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Asinhas de frango ao molho barbecue</p>
-      <p class="card__author">por Vania Steoski</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/burger.png" alt="Burger">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Triplo Bacon Burger</p>
-      <p class="card__author">por Jorge Relato</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/pizza.png" alt="Pizza">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Pizza 4 estacoes</p>
-      <p class="card__author">por Fabiana Melo</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/espaguete.png" alt="Espaguete">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Espaguete ao alho</p>
-      <p class="card__author">por Julia Kinoto</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/lasanha.png" alt="Lasanha mac n'cheese">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Lasanha mac n'cheese</p>
-      <p class="card__author">por Juliano Vieira</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/doce.png" alt="Docinhos pao-do-ceu">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Docinhos pao-do-ceu</p>
-      <p class="card__author">por Ricardo Golvea</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card__image-container">
-      <img src="assets/asinhas.png" alt="Asinhas de frango ao barbecue">
-    </div>
-
-    <div class="card__recipe">
-      <p class="card__recipe-name">Asinhas de frango ao molho barbecue</p>
-      <p class="card__author">por Vania Steoski</p>
-    </div>
-  </div>
 </section>
+
 
 {% endblock %}
 
