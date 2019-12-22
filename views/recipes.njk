@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-<title>Recipes - Foodfy</title> 
+<title>Recipes - Foodfy</title>
 
 <link rel="stylesheet" href="/recipes.css">
 
@@ -9,11 +9,10 @@
 
 {% block content %}
 
+
 <section class="cards">
 
-
-
-{% for item in items %}
+  {% for item in items %}
 
   <div class="card" id="{{item.title}}">
       <div class="card__image-container">
@@ -33,5 +32,3 @@
 <script src="/scripts.js"></script>
 
 {% endblock %}
-
-
