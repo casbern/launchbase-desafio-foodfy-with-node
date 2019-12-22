@@ -1,31 +1,31 @@
-const showHide = document.querySelectorAll('h4')
+// const showHide = document.querySelectorAll('h4')
 
-for(showHide of showHides) {
+// for(showHide of showHides) {
 
-  let selector = document.querySelector('.topic-content')
+//   let selector = document.querySelector('.topic-content')
 
-  showHide.addEventListener('click', function() {
+//   showHide.addEventListener('click', function() {
 
-    console.log(showHide.innerHTML)
+//     console.log(showHide.innerHTML)
 
-    if (showHide.innerHTML === 'MOSTRAR') {
-      //add class
+//     if (showHide.innerHTML === 'MOSTRAR') {
+//       //add class
 
-      alert('cliquei no mostrar')
+//       alert('cliquei no mostrar')
 
-      //style
+//       //style
 
-    } else if (showHide.innerHTML === 'ESCONDER') {
-      //add class
+//     } else if (showHide.innerHTML === 'ESCONDER') {
+//       //add class
 
-      //style
+//       //style
 
-      alert('cliquei no esconder')
+//       alert('cliquei no esconder')
 
-    }
-
-
+//     }
 
 
-  })
-}
+
+
+//   })
+// }
