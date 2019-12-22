@@ -2,6 +2,8 @@
 
  {% block head %}
  <title>{{ item.title }}</title>
+
+ <link rel="stylesheet" href="/recipe.css">
  {% endblock %}
 
  {% block content %}
@@ -17,13 +19,12 @@
      <div id="ingredients" class="topic">
        <h3>Ingredients</h3>
        <h4>ESCONDER</h4>
-
        <div class="topic-content">
          <ul>
 
            {% for ingredient in item.ingredients %}
-           <li>{{ingredients}}</li>
-           {% endfor%}
+           <li>{{ingredient}}</li>
+           {% endfor %}
 
          </ul>
        </div>

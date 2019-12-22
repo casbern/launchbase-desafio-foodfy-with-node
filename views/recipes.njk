@@ -11,6 +11,8 @@
 
 <section class="cards">
 
+<a href="/recipes/{{item.index}}"></a>
+
 {% for item in items %}
 
   <div class="card" id="{{item.title}}">
@@ -28,23 +30,8 @@
 
 </section>
 
-
-{% endblock %}
-
-{% block modal %}
-
-<div class="modal-overlay">
-  <div class="modal">
-    <div class="modal-content">
-      <img src="" alt="">
-      <p class="modal__recipe-name"></p>
-      <p class="modal__author"></p>
-      <p class="modal__close">Fechar modal</p>
-    </div>
-  </div>
-</div>
-
 <script src="/scripts.js"></script>
 
 {% endblock %}
+
 
