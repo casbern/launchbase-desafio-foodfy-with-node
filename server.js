@@ -36,6 +36,12 @@ server.get('/recipes', function(req, res) {
 })
 
 server.get('/recipes/:index', function(req, res) {
+
+  for(let i=0; i < recipes.length; i++) {
+    const obj = recipes[i]
+    obj.index = i
+    recipesFiltered.push(obj)
+
   const { index: recipeIndex } = req.params
 
   const recipe = recipes[recipeIndex]
