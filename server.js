@@ -50,7 +50,7 @@ server.get('/recipes/:index', function(req, res) {
   if (!recipe) return res.send('Recipe not found!')
 
   return res.render('recipe', { item: recipe })
-}
+})
 
 
 server.listen(3000, function(){
