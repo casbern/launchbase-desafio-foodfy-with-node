@@ -1,3 +1,26 @@
+
+h3 {
+  padding: 20px 0 20px 0;
+}
+
+h4 {
+  padding-bottom: 30px;
+}
+
+.recipe {
+  line-height: 20px;
+}
+
+.recipe-header {
+  line-height: 40px;
+}
+
+.recipe-content {
+  list-style-position: inside;
+}
+
+/* === Links === */
+
 .linkActive {
   font-weight: bold;
 }
@@ -9,7 +32,6 @@
 .show {
   display: block;
 }
-
 
 @keyframes fadeIn {
   0% {
