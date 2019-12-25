@@ -15,9 +15,17 @@ nunjucks.configure("views", {
 })
 
 server.get('/', function(req, res) {  
-  
-  return res.render("index", { items: recipes })
 
+  let recipesFiltered = []
+
+  for(let i=0; i < 6; i++) {
+    const obj = recipes[i]
+    obj.index = i
+    recipesFiltered.push(obj)
+  }
+
+  return res.render("index", { items: recipesFiltered })
+  
 })
 
 server.get('/about', function(req, res) {
