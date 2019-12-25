@@ -14,23 +14,9 @@ nunjucks.configure("views", {
   noCache: true
 })
 
-function filterRecipes(recipes, n) {
-    // this function receives all recipes and returns just the first "n"
-    // also for each recipe adds an index property
-
-    let recipesFiltered = []
-
-    for(let i=0; i < n; i++) {
-        const obj = recipes[i]
-        obj.index = i
-        recipesFiltered.push(obj)
-    }
-
-    return recipesFiltered;
-}
 
 server.get('/', function(req, res) {
-    return res.render("index", { items: filterRecipes(recipes, 6) })
+    return res.render("index", { items: recipes.slice(0, 6) })
 })
 
 server.get('/about', function(req, res) {
@@ -38,7 +24,7 @@ server.get('/about', function(req, res) {
 })
 
 server.get('/recipes', function(req, res) {
-    return res.render("recipes", { items: filterRecipes(recipes, 6) })
+    return res.render("recipes", { items: recipes.slice(0, 6) })
 
 })
 
