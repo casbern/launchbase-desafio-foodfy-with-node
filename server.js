@@ -15,6 +15,7 @@ nunjucks.configure("views", {
 })
 
 
+
 server.get('/', function(req, res) {
     return res.render("index", { items: recipes.slice(0, 6) })
 })
@@ -24,7 +25,7 @@ server.get('/about', function(req, res) {
 })
 
 server.get('/recipes', function(req, res) {
-    return res.render("recipes", { items: recipes.slice(0, 6) })
+    return res.render("recipes", { items: recipes })
 
 })
 
