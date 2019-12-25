@@ -14,18 +14,9 @@ nunjucks.configure("views", {
   noCache: true
 })
 
-server.get('/', function(req, res) {  
 
-  let recipesFiltered = []
-
-  for(let i=0; i < 6; i++) {
-    const obj = recipes[i]
-    obj.index = i
-    recipesFiltered.push(obj)
-  }
-
-  return res.render("index", { items: recipesFiltered })
-  
+server.get('/', function(req, res) {
+    return res.render("index", { items: recipes.slice(0, 6) })
 })
 
 server.get('/about', function(req, res) {
@@ -33,12 +24,12 @@ server.get('/about', function(req, res) {
 })
 
 server.get('/recipes', function(req, res) {
-  return res.render("recipes", { items: recipes })
+    return res.render("recipes", { items: recipes.slice(0, 6) })
 
 })
 
 server.get('/recipes/:index', function(req, res) {
-  
+
   const { index: recipeIndex } = req.params
 
   const recipe = recipes[recipeIndex]
