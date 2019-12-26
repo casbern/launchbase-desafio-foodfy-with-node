@@ -30,7 +30,7 @@ server.get('/recipes', function(req, res) {
 server.get('/recipes/:index', function(req, res) {
 
   const { index: recipeIndex } = req.params
-
+  
   const recipe = recipes[recipeIndex]
 
   if (!recipe) return res.send('Recipe not found!')
