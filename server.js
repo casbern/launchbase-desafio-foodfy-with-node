@@ -14,8 +14,6 @@ nunjucks.configure("views", {
   noCache: true
 })
 
-
-
 server.get('/', function(req, res) {
     return res.render("index", { items: recipes.slice(0, 6) })
 })
