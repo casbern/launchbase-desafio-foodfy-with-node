@@ -8,14 +8,14 @@ for (showHide of showHides) {
 
     console.log(`this is the h4 I clicked`)
 
-    console.log(showHide.innerHTML)
+    console.log(showHide)
 
     if (showHide.innerHTML === 'MOSTRAR') {
       //add class
 
       //let selector = document.querySelector('.topic-content')
 
-      alert('cliquei no mostrar')
+      console.log('cliquei no mostrar')
 
       //   //       //style
 
@@ -24,7 +24,7 @@ for (showHide of showHides) {
 
       //style
 
-      alert('cliquei no esconder')
+      console.log('cliquei no esconder')
 
     }
 
