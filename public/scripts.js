@@ -5,13 +5,13 @@ let sectionName; // this will be set as either ingredients, preparation or infor
 function showTheTopic(sectionName) {
 
   let topicId = 'topic-content-' + sectionName
-  console.log(topicId)
+
+
 }
 
 function hideTheTopic(sectionName) {
 
   let topicId = 'topic-content-' + sectionName
-  console.log(topicId)
 }
 
 for (showHide of showHides) {
@@ -21,16 +21,19 @@ for (showHide of showHides) {
     let h4Id = event.target.id
 
     let h4IdArray = h4Id.split('-')
+
     sectionName = h4IdArray[h4IdArray.length - 1]
+
 
     if (event.target.innerHTML === 'MOSTRAR') {
 
-      console.log('cliquei no mostrar')
+      event.target.innerHTML = "ESCONDER"
 
       showTheTopic(sectionName);
 
     } else {
-      console.log('cliquei no esconder')
+
+      event.target.innerHTML = "MOSTRAR"
 
       hideTheTopic(sectionName);
 
