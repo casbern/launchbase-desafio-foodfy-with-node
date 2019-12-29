@@ -7,14 +7,17 @@ for (showHide of showHides) {
   console.log('showHide outside the addEventListener is')
   console.log(showHide)
 
-  showHide.addEventListener('click', function () {
+  showHide.addEventListener('click', function (event) {
 
 
     console.log(`this is the h4 I clicked`)
+    console.log(event.target)
 
-    console.log(showHide)
+      console.log(`this is the h4 innerHTML`)
+      console.log(event.target.innerHTML)
 
-    if (showHide.innerHTML === 'MOSTRAR') {
+
+    if (event.target.innerHTML === 'MOSTRAR') {
       //add class
 
       //let selector = document.querySelector('.topic-content')
