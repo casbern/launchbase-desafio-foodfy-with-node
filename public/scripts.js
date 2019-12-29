@@ -1,30 +1,38 @@
 let showHides = document.querySelectorAll('h4')
+let sectionName; // this will be set as either ingredients, preparation or information
+
+
+function showTheTopic(sectionName) {
+
+  let topicId = 'topic-content-' + sectionName
+  console.log(topicId)
+}
+
+function hideTheTopic(sectionName) {
+
+  let topicId = 'topic-content-' + sectionName
+  console.log(topicId)
+}
 
 for (showHide of showHides) {
 
+  showHide.addEventListener('click', function (event) {
 
-  showHide.addEventListener('click', function () {
+    let h4Id = event.target.id
 
+    let h4IdArray = h4Id.split('-')
+    sectionName = h4IdArray[h4IdArray.length - 1]
 
-    console.log(`this is the h4 I clicked`)
-
-    console.log(showHide)
-
-    if (showHide.innerHTML === 'MOSTRAR') {
-      //add class
-
-      //let selector = document.querySelector('.topic-content')
+    if (event.target.innerHTML === 'MOSTRAR') {
 
       console.log('cliquei no mostrar')
 
-      //   //       //style
+      showTheTopic(sectionName);
 
     } else {
-      //add class
-
-      //style
-
       console.log('cliquei no esconder')
+
+      hideTheTopic(sectionName);
 
     }
 

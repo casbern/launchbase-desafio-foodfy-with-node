@@ -21,7 +21,7 @@
          <h3>Ingredients</h3>
          <h4>ESCONDER</h4>
        </div>
-       <div class="topic-content">
+       <div class="topic-content" id="topic-content-ingredients">
          <ul>
 
            {% for ingredient in item.ingredients %}
@@ -37,7 +37,7 @@
          <h3>Modo de Preparo</h3>
          <h4>MOSTRAR</h4>
        </div>
-       <div class="topic-content">
+       <div class="topic-content" id="topic-content-preparation">
          <ul>
 
            {% for preparation in item.preparation %}
@@ -53,7 +53,7 @@
          <h3>Informacoes Adicionais</h3>
          <h4>MOSTRAR</h4>
        </div>
-       <div class="topic-content">
+       <div class="topic-content" id="topic-content-information">
          <p>{{item.information}}</p>
        </div>
      </div>
