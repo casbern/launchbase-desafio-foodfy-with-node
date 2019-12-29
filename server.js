@@ -39,6 +39,6 @@ server.get('/recipes/:index', function(req, res) {
 })
 
 
-server.listen(3000, function(){
+server.listen(8080, function(){
   console.log('server is running')
 })

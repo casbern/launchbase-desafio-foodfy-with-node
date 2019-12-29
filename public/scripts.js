@@ -1,23 +1,25 @@
-const showHide = document.querySelectorAll('h4')
+let showHides = document.querySelectorAll('h4')
 
-console.log(showHide)
+for (showHide of showHides) {
 
-for(showHide of showHides) {
 
-  let selector = document.querySelector('.topic-content')
+  showHide.addEventListener('click', function () {
 
-  showHide.addEventListener('click', function() {
+
+    console.log(`this is the h4 I clicked`)
 
     console.log(showHide.innerHTML)
 
     if (showHide.innerHTML === 'MOSTRAR') {
       //add class
 
+      //let selector = document.querySelector('.topic-content')
+
       alert('cliquei no mostrar')
 
-      //style
+      //   //       //style
 
-    } else if (showHide.innerHTML === 'ESCONDER') {
+    } else {
       //add class
 
       //style
@@ -25,13 +27,17 @@ for(showHide of showHides) {
       alert('cliquei no esconder')
 
     }
+
   })
- }
+
+}
+
+
 
 /* ==== Links ==== */
 
 function linkActive(id, pathname) {
- //console.log(`linkActive(id=${id}, pathname=${pathname}) was called`)
+  //console.log(`linkActive(id=${id}, pathname=${pathname}) was called`)
 
   const link = document.querySelector(id)
 
@@ -40,7 +46,7 @@ function linkActive(id, pathname) {
   if (document.location.pathname.includes(pathname)) {
     //console.log(`if was executed for id ${id} and pathname ${pathname}`)
     link.classList.add("active")
-    
+
   }
 }
 
