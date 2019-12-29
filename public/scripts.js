@@ -4,6 +4,8 @@ let showHides = document.querySelectorAll('h4')
 
 for (showHide of showHides) {
 
+  console.log('showHide outside the addEventListener is')
+  console.log(showHide)
 
   showHide.addEventListener('click', function () {
 
