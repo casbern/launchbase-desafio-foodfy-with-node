@@ -1,15 +1,12 @@
 let showHides = document.querySelectorAll('h4')
+let topicId = document.querySelector("#topic-content")
 
 function showTopic() {
-
-  let topicId = document.querySelector("#topic-content")
 
   topicId.classList.remove("topic-content")
 }
 
 function hideTopic() {
-
-  let topicId = document.querySelector("#topic-content")
 
   topicId.classList.add("topic-content")
 }
@@ -18,7 +15,7 @@ for (showHide of showHides) {
 
   showHide.addEventListener('click', function (event) {
 
-    if (event.target.innerHTML === 'MOSTRAR') {
+    if (event.target.innerHTML === "MOSTRAR") {
 
       event.target.innerHTML = "ESCONDER"
 
