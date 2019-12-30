@@ -1,5 +1,5 @@
 let showHides = document.querySelectorAll('h4')
-let topicId = document.querySelector("#topic-content")
+let topicId = document.querySelector("#content")
 
 function showTopic() {
 
