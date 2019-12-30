@@ -41,6 +41,11 @@ ul {
   list-style-position: inside;
 }
 
+.topic-content {
+  display: none;
+}
+
+
 /* === Links === */
 
 .linkActive {

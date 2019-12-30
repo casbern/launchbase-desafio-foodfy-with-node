@@ -19,9 +19,9 @@
      <div id="ingredients" class="topic">
        <div class="button">
          <h3>Ingredients</h3>
-         <h4 id="show-hide-ingredients">ESCONDER</h4>
+         <h4 id="show-hide-ingredients">MOSTRAR</h4>
        </div>
-       <div class="topic-content" id="topic-content-ingredients">
+       <div class="topic-content" id="topic-content">
          <ul>
 
            {% for ingredient in item.ingredients %}
@@ -37,7 +37,7 @@
          <h3>Modo de Preparo</h3>
          <h4 id="show-hide-preparation">MOSTRAR</h4>
        </div>
-       <div class="topic-content" id="topic-content-preparation">
+       <div class="topic-content" id="topic-content">
          <ul>
 
            {% for preparation in item.preparation %}
@@ -53,7 +53,7 @@
          <h3>Informacoes Adicionais</h3>
          <h4 id="show-hide-information">MOSTRAR</h4>
        </div>
-       <div class="topic-content" id="topic-content-information">
+       <div class="topic-content" id="topic-content">
          <p>{{item.information}}</p>
        </div>
      </div>
