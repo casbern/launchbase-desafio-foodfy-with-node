@@ -1,31 +1,43 @@
 let showHides = document.querySelectorAll('h4')
-let topicId = document.querySelector("#content")
 
-function showTopic() {
+function showTopic(h4IdName) {
 
-  topicId.classList.remove("topic-content")
+  let id = '#topic-' + h4IdName
+
+  let idDom = document.querySelector(id)
+
+  idDom.classList.remove("topic-content")
 }
 
-function hideTopic() {
+function hideTopic(h4IdName) {
 
-  topicId.classList.add("topic-content")
+  let id = '#topic-' + h4IdName
+
+  let idDom = document.querySelector(id)
+
+  idDom.classList.add("topic-content")
 }
 
 for (showHide of showHides) {
 
   showHide.addEventListener('click', function (event) {
 
+    let h4Id = event.target.id
+    let h4IdArray = h4Id.split('-')
+    let h4IdName = h4IdArray[h4IdArray.length - 1]
+
+
     if (event.target.innerHTML === "MOSTRAR") {
 
       event.target.innerHTML = "ESCONDER"
 
-      showTopic();
+      showTopic(h4IdName);
 
     } else {
 
       event.target.innerHTML = "MOSTRAR"
 
-      hideTopic();
+      hideTopic(h4IdName);
 
     }
 
