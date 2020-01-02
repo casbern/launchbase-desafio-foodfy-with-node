@@ -6,7 +6,7 @@ function showTopic(h4IdName) {
 
   let idDom = document.querySelector(id)
 
-  idDom.classList.remove("topic-content")
+  idDom.classList.remove("hide")
 }
 
 function hideTopic(h4IdName) {
@@ -15,7 +15,7 @@ function hideTopic(h4IdName) {
 
   let idDom = document.querySelector(id)
 
-  idDom.classList.add("topic-content")
+  idDom.classList.add("hide")
 }
 
 for (showHide of showHides) {
